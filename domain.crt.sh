@@ -22,10 +22,11 @@ declare -a array=($list)
 arraylength=${#array[@]}
 
 # use for loop to read all values and indexes
+count=0
 for (( i=1; i<${arraylength}+1; i++ ));
 do
   urlDomains="$url${array[$i-1]}"
-  echo $urlDomains
+#  echo $urlDomains
   listDomains=`wget -qO- $urlDomains | grep -Eoi 'DNS[^>]+<' | cut -c 5- | cut -d '<' -f 1`
 
   declare -a arrayDomains=($listDomains)
@@ -34,7 +35,11 @@ do
   arrayDomainslength=${#arrayDomains[@]}
   for (( j=1; j<${arrayDomainslength}+1; j++ ));
   do
-     echo "-> ${arrayDomains[$j-1]}"
+#     echo "-> ${arrayDomains[$j-1]}"
+     completeDomainlist[$count]=${arrayDomains[$j-1]}
+     count=$count+1
   done
 
-done
+done;
+
+printf "\n `echo "${completeDomainlist[@]}" | tr ' ' '\n' | sort -u | uniq `"

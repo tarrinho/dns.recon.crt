@@ -8,6 +8,10 @@ Get all DNS from crt.sh - digital certificates
 
 companyName="Apple+Inc"
 
+To run the script just:
+
+$ sh domain.crt.sh
+
 
 
 I would like to thank Comodo for the CRT.SH site © COMODO CA Limited 2015-2018. All rights reserved.

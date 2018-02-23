@@ -3,7 +3,9 @@ Get all DNS from crt.sh - digital certificates
 
 
 #don't forget to add + instead of spaces
+
 #Example:
+
 companyName="Apple+Inc"
 
 

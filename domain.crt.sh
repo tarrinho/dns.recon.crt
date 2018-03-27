@@ -7,7 +7,7 @@
 
 #don't forget to add + instead of spaces
 #
-companyName="JTSL.PT"
+companyName="APPLE"
 #
 # Url of the service from COMODO
 url="https://crt.sh/"

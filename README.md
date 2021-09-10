@@ -10,7 +10,7 @@ companyName="Apple+Inc"
 
 To run the script just:
 
-$ sh domain.crt.sh
+$ bash domain.crt.sh
 
 
 
